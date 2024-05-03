@@ -52,7 +52,9 @@ router.get('/check-middleware/:id',
   response_controller)
 
 
-
+router.get('/', (req,res)=>{
+  res.send("Hello World")
+})
 
 
 module.exports = router;
