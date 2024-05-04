@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connect_to_database = async () => {
-  mongoose.connect(process.env.MONGODB_DATABASE_URI, {});
+  mongoose.connect("mongodb://127.0.0.1:27017/react", {});
 
   mongoose.connection.on("connected", () => {
     console.log("Mongodb is connected!");
