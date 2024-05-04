@@ -51,7 +51,7 @@ console.log('user Login')
     };
 
     const jwt_token = jwt.sign(payload, process.env.JWT_SECRET_KEY, {
-      expiresIn: "5m",
+      expiresIn: "1d",
     });
 
     // Increment the login_count field of the user document by 1
@@ -72,7 +72,7 @@ console.log('user Login')
 
     return res.json({ success: true, message: "Loggedin Successfully!" });
   } catch (error) {
-    res.status(500).json({ success: false, message: "Internal error" });
+    res.status(500).json({ success: false, message: "Internal error",error:error});
   }
 };
 

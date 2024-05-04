@@ -5,7 +5,7 @@ import axios from "axios";
 // console.log(env_variables.VITE_APP_API_URL)
 
 const axios_instance = axios.create({
-    baseURL:'http://localhost:5000'
+    baseURL:import.meta.env.VITE_APP_API_URL
 })
 
 
