@@ -34,6 +34,6 @@ connect_to_database();
 
 app.use(all_routes);
 
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
   console.log("server is listening, Port:5000");
 });
