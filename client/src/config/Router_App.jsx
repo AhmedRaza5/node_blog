@@ -5,7 +5,8 @@ import { Home } from "../pages/Home";
 import { Private_Routes } from "./Private_Routes";
 import { Public_Routes } from "./Public_Routes";
 import { Create_Blog } from "../pages/Create_Blog";
-import UserPost from "../pages/userpost";
+import { UserPost } from "../pages/userpost";
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(

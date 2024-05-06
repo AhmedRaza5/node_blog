@@ -182,4 +182,4 @@ const UserPost = () => {
   )
 }
 
-export default UserPost
+export {UserPost}
