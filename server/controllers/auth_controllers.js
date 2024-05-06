@@ -118,7 +118,7 @@ const user_find = async(req,res)=>{
   }
 }
 const logout_user = (req,res)=>{
-  res.clearCookie('auth_token');
+  res.clearCookie('auth_token',{ path: '/' });
 
   res.send('Cookie removed successfully');
   console.log("delete cookies")
