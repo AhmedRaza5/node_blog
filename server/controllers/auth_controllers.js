@@ -67,6 +67,7 @@ console.log('user Login')
     res.cookie("auth_token", jwt_token, {
       http:true,
       sameSite:'none',
+      secure: true,
       expires:new Date(Date.now() + (1 * 1 * 60 * 60 * 1000)) 
       
     });
