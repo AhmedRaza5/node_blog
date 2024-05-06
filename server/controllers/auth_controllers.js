@@ -66,6 +66,7 @@ console.log('user Login')
     // and will expire 24 hours from the current time
     res.cookie("auth_token", jwt_token, {
       http:true,
+      sameSite:'none',
       expires:new Date(Date.now() + (1 * 1 * 60 * 60 * 1000)) 
       
     });
