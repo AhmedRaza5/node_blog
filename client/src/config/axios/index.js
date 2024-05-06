@@ -5,7 +5,7 @@ import axios from "axios";
 // console.log(env_variables.VITE_APP_API_URL)
 
 const axios_instance = axios.create({
-    baseURL:import.meta.env.VITE_APP_API_URL
+    baseURL:import.meta.env.VITE_VERCEL_ENV
 })
 
 
