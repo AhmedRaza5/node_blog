@@ -12,10 +12,7 @@ const User_Profile_Section = ({userData}) => {
         // alert('Cookie removed successfully');
         try {
             await axios_instance.delete('/logout')
-            const pastDate = new Date(0);
-            console.log(pastDate)
-            document.cookie = `auth_token=; expires=' ${pastDate.toUTCString()} path=/; domain=https://nodeprojectahmedraza-ahmed-razas-projects-f0a0cba7.vercel.app/`;
-            // Cookie.remove('auth_token', {path:'/',domain: 'https://nodeprojectdfdfhklo-kjhudfij-razas-projects-f0a0cba7.vercel.app/'});
+            Cookie.remove('auth_token', {path:'/',domain: 'nodeprojectdfdfhklo-kjhudfij-razas-projects-f0a0cba7.vercel.app', secure:true,sameSite: 'None',expires:0});
             window.location.reload();
         }catch (error) {
             console.log(error,"error")
