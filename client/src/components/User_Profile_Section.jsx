@@ -12,7 +12,7 @@ const User_Profile_Section = ({userData}) => {
         // alert('Cookie removed successfully');
         try {
             await axios_instance.delete('/logout')
-            Cookie.remove('auth_token', {path:'/'});
+            Cookie.remove('auth_token', {path:'/',domain: 'https://node-blog-puce.vercel.app/'});
             // document.cookie = "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             window.location.reload();
         }catch (error) {
