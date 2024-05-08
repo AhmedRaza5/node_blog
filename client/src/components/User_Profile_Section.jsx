@@ -12,7 +12,7 @@ const User_Profile_Section = ({userData}) => {
         // alert('Cookie removed successfully');
         try {
             await axios_instance.delete('/logout')
-            Cookie.remove('auth_token', {path:'/',domain: 'nodeprojectdfdfhklo-kjhudfij-razas-projects-f0a0cba7.vercel.app', secure:true,sameSite: 'None',expires:0});
+            // Cookie.remove('auth_token', {path:'/',domain: 'nodeprojectdfdfhklo-kjhudfij-razas-projects-f0a0cba7.vercel.app', secure:true,sameSite: 'None',expires:0});
             window.location.reload();
         }catch (error) {
             console.log(error,"error")
