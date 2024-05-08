@@ -1,5 +1,6 @@
 import React from 'react'
 import axios_instance from '../config/axios'
+import Cookie from "js-cookie";
 
 
 
@@ -11,7 +12,8 @@ const User_Profile_Section = ({userData}) => {
         // alert('Cookie removed successfully');
         try {
             await axios_instance.delete('/logout')
-            document.cookie = "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            Cookie.remove('auth_token', {path:'/'});
+            // document.cookie = "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             window.location.reload();
         }catch (error) {
             console.log(error,"error")
