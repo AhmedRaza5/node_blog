@@ -12,14 +12,15 @@ const User_Profile_Section = ({userData}) => {
         // alert('Cookie removed successfully');
         try {
             await axios_instance.delete('/logout')
-            Cookie.remove('auth_token', {path:'/',domain: 'https://nodeprojectahmedraza-ahmed-razas-projects-f0a0cba7.vercel.app/'});
-            // document.cookie = "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = 'auth_token=; Max-Age=0; path=/; domain=https://nodeprojectahmedraza-ahmed-razas-projects-f0a0cba7.vercel.app/';
+            // Cookie.remove('auth_token', {path:'/',domain: 'https://nodeprojectdfdfhklo-kjhudfij-razas-projects-f0a0cba7.vercel.app/'});
             window.location.reload();
         }catch (error) {
             console.log(error,"error")
         }
         
     }
+    // document.cookie = "auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
     return (
         <div className='rounded-md px-3 py-4 mt-3 bg-white max-w-full '>
